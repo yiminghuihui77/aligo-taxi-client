@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: taxi-client
+server:
+  port: 8899
+
+eureka:
+  instance:
+    hostname: taxi-client
+  client:
+    service-url:
+     defaultZone: http://eurekaOne:8888/eureka/
+     #是否从从注册中心获取服务信息
+    fetch-registry: true
+    #是否注册到注册中心
+    register-with-eureka: true
